@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="Marvel" title="Marvel Logo" src="./logo.png" width="20%">
+    <img alt="Marvel" title="Marvel Logo" src="/public/logo.png" width="20%">
 </div>
 
 # Marvel App | front-end
