@@ -21,6 +21,7 @@ interface HomeProps {
 
 const Home: NextPage = ({ comics }: HomeProps) => {
   const [comicsArr, setComicsArr] = useState<ComicsProps[]>([]);
+  console.log(comics);
 
   useEffect(() => {
     comics && setComicsArr(comics);
@@ -50,18 +51,21 @@ const Home: NextPage = ({ comics }: HomeProps) => {
         image="/favicon.png"
       />
 
-      <S.Header>
-        <S.SearchInputContainer>
-          <input type="text" />
-        </S.SearchInputContainer>
-      </S.Header>
-
       <S.Container>
+        <S.Header>
+          <h1>
+            Encontre seu quadrinho <img src="logo.png" id="logo" /> favorito
+          </h1>
+          <S.SearchInputContainer>
+            <input type="text" />
+          </S.SearchInputContainer>
+        </S.Header>
+
         <S.InfoSection>
-          <p>
-            Clique no seu quadrinho favorito <img src="logo.png" /> para saber
-            mais
-          </p>
+          <h1>
+            Clique no seu quadrinho favorito <img src="logo.png" id="logo" />{' '}
+            para saber mais
+          </h1>
         </S.InfoSection>
         <S.CardContainer>
           {comicsArr?.length > 0 &&

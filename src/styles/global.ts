@@ -71,4 +71,9 @@ export const GlobalStyle = createGlobalStyle`
   li {
     user-select: none;
   }
+
+  h1 {
+    color: var(--white);
+    font: 700 1.5rem "Permanent Marker", sans-serif;
+  }
 `;

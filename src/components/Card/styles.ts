@@ -12,6 +12,7 @@ export const Container = styled.div`
   background-color: var(--gray-50);
   transform: translatey(0px);
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
   z-index: 1;
 	
   &:hover {
@@ -65,9 +66,8 @@ export const Title = styled.h1`
   position: relative;
   color: var(--gray-50);
   z-index: 2;
-
-  font: 700 1.5rem "Permanent Marker", sans-serif;
 `;
+
 export const Description = styled.h1`
   position: relative;
   color: var(--gray-50);
