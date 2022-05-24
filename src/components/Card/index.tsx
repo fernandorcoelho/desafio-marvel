@@ -18,7 +18,7 @@ export const Card = ({ title, description, src }: CardProps) => {
       <S.InfoContainer>
         <S.Title>{title}</S.Title>
         <S.Description className={isActive && 'active'}>
-          {description}
+          {!description ? 'Descrição não disponível' : description}
         </S.Description>
       </S.InfoContainer>
     </S.Container>

@@ -71,17 +71,19 @@ const Home: NextPage = ({ comics }: HomeProps) => {
         </S.InfoSection>
         <S.CardContainer>
           {comicsArr?.length > 0 &&
-            comicsArr?.map(
-              (item) =>
-                item?.description && (
-                  <Card
-                    key={String(item?.id)}
-                    title={item?.title}
-                    description={item?.description}
-                    src={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
-                  />
-                )
-            )}
+            comicsArr?.map((item) => (
+              <Card
+                key={String(item?.id)}
+                title={item?.title}
+                description={item?.description}
+                src={
+                  item?.thumbnail?.path ===
+                  'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'
+                    ? 'logo.png'
+                    : `${item?.thumbnail?.path}.${item?.thumbnail?.extension}`
+                }
+              />
+            ))}
         </S.CardContainer>
 
         <S.MoreButton onClick={() => handleMoreComics()}>
