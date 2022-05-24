@@ -4,7 +4,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 3rem 3.5%;
+  padding: 3rem 10%;
 
   background: #DC2424; 
   background: -webkit-linear-gradient(to left,  #bc4040, #5c6dd6); 
@@ -37,7 +37,7 @@ export const Header = styled.header`
   align-items: center;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 `;
 
@@ -83,7 +83,7 @@ export const InfoSection = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
 
     img {
       height: 1.75rem;
