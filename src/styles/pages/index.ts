@@ -65,7 +65,7 @@ export const SearchInputContainer = styled.div`
   }
 
   button {
-    font-size: 24px;
+    font-size: 1.5rem;
     background: #1c345b;
     color: white;
     border: blue;
