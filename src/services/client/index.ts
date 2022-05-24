@@ -13,12 +13,7 @@ export function setupAPI() {
       ts,
       apikey: publicKey,
       hash
-    },
-    // headers: {
-    //   'Content-Type': 'application/json;charset=UTF-8',
-    //   "Access-Control-Allow-Origin": "*",
-    //   'Accept': '/'
-    // }
+    }
   });
 
   return api;

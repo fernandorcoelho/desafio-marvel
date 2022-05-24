@@ -14,8 +14,6 @@ export const GlobalStyle = createGlobalStyle`
     --black: #0f0f0f;
 
     --gray-50: #fafafa;
-    --gray-100: #f5f5f5;
-    --gray-300: #b5b5b5;
     --gray-900: #202020;
     
     --red-500: #E92529;
@@ -80,5 +78,19 @@ export const GlobalStyle = createGlobalStyle`
 
   ::selection {
     color: var(--orange-500);
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--gray-900);
+    border-radius: 0;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: var(--gray-50);
   }
 `;
