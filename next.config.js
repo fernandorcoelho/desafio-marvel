@@ -10,6 +10,6 @@ module.exports = {
     ]
   },
   compiler: {
-    styledComponents: true
+    styledComponents: truepp
   }
 };
