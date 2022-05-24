@@ -13,13 +13,18 @@ export const Container = styled.main`
 export const CardContainer = styled.div`  
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
 
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
