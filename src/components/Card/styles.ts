@@ -66,7 +66,7 @@ export const Title = styled.h1`
   color: var(--gray-50);
   z-index: 2;
 
-  font: 700 1.5rem "Marvel", sans-serif;
+  font: 700 1.5rem "Permanent Marker", sans-serif;
 `;
 export const Description = styled.h1`
   position: relative;

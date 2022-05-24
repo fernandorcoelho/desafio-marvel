@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import type { GetStaticProps, NextPage } from 'next';
-import { useRouter } from 'next/router';
 import { RiAddFill } from 'react-icons/ri';
 
 import { api } from 'services/client';
@@ -22,7 +21,6 @@ interface HomeProps {
 
 const Home: NextPage = ({ comics }: HomeProps) => {
   const [comicsArr, setComicsArr] = useState<ComicsProps[]>([]);
-  console.log(comics);
 
   useEffect(() => {
     comics && setComicsArr(comics);
@@ -45,7 +43,7 @@ const Home: NextPage = ({ comics }: HomeProps) => {
   };
 
   return (
-    <S.Container>
+    <>
       <MetaTags
         title="Home | Marvel 360º"
         description="Encontre seu quadrinho favorito na Marvel 360º"
@@ -53,30 +51,38 @@ const Home: NextPage = ({ comics }: HomeProps) => {
       />
 
       <S.Header>
-        <p>
-          Clique no seu quadrinho favorito <strong>Marvel</strong> para saber
-          mais
-        </p>
+        <S.SearchInputContainer>
+          <input type="text" />
+        </S.SearchInputContainer>
       </S.Header>
-      <S.CardContainer>
-        {comicsArr?.length > 0 &&
-          comicsArr?.map(
-            (item) =>
-              item?.description && (
-                <Card
-                  key={String(item?.id)}
-                  title={item?.title}
-                  description={item?.description}
-                  src={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
-                />
-              )
-          )}
-      </S.CardContainer>
 
-      <S.MoreButton onClick={() => handleMoreComics()}>
-        <span>Ver mais</span> <RiAddFill />
-      </S.MoreButton>
-    </S.Container>
+      <S.Container>
+        <S.InfoSection>
+          <p>
+            Clique no seu quadrinho favorito <img src="logo.png" /> para saber
+            mais
+          </p>
+        </S.InfoSection>
+        <S.CardContainer>
+          {comicsArr?.length > 0 &&
+            comicsArr?.map(
+              (item) =>
+                item?.description && (
+                  <Card
+                    key={String(item?.id)}
+                    title={item?.title}
+                    description={item?.description}
+                    src={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
+                  />
+                )
+            )}
+        </S.CardContainer>
+
+        <S.MoreButton onClick={() => handleMoreComics()}>
+          <span>Ver mais</span> <RiAddFill />
+        </S.MoreButton>
+      </S.Container>
+    </>
   );
 };
 

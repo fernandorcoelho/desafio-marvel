@@ -28,20 +28,42 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const Header = styled.div`
+export const Header = styled.header`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 3.5%;
+  background-color: var(--orange-50);
+
+  img {
+    width: auto;
+    height: 3rem;
+  }  
+`;
+
+export const SearchInputContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+
+export const InfoSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: 1rem;
 
-    strong {
-      color: var(--red-500);
+    > img {
+      height: 1.75rem;
+      width: auto;
     }
   }
 `;
