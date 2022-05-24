@@ -9,7 +9,7 @@ Front-end of Marvel application - SPA connected with a back-end developed using 
 You can also [click here](https://github.com/cunhasbia/marvel-backend) to go to the **back-end** repository of this application. Run both projects together.
 
 <div align="center">
-    <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="./public/img/screenshot.png" width="100%">
+    <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="/public/screenshot.png" width="100%">
 </div>
 <hr> 
 
