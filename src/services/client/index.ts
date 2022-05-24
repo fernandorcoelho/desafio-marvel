@@ -13,6 +13,9 @@ export function setupAPI() {
       ts,
       apikey: publicKey,
       hash
+    },
+    headers: {
+      'Accept': '/'
     }
   });
 

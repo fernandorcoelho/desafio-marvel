@@ -7,7 +7,6 @@ import { Card } from 'components/Card';
 import MetaTags from 'components/MetaTags';
 
 import * as S from 'styles/pages/index';
-import md5 from 'md5';
 
 interface ComicsProps {
   id: number;
@@ -30,18 +29,11 @@ const Home: NextPage = ({ comics }: HomeProps) => {
 
   const handleMoreComics = async () => {
     try {
-      const publicKey = '7c9d0981ca0b182a60d9bab410e81c4f';
-      const privateKey = 'bda1a3344a65c93ffa8aa22355c283048c9dfc8b';
-      const ts = Number(new Date());
-      const hash = md5(ts + privateKey + publicKey);
       const offset = comics.length;
 
       const { data } = await api.get('/comics', {
         params: {
-          offset,
-          ts,
-          apikey: publicKey,
-          hash
+          offset
         }
       });
 
