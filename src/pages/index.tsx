@@ -5,7 +5,8 @@ import axios from 'axios';
 
 import * as S from 'styles/pages/index';
 import { Card } from 'components/Card';
-import Slider, { Settings } from 'react-slick';
+import MetaTags from 'components/MetaTags';
+import { api } from 'services/client';
 
 interface ComicProps {
   id: number;
@@ -26,42 +27,33 @@ const Home: NextPage = ({ marvelData }: HomeProps) => {
     return <p>Loading...</p>;
   }
 
-  const settings: Settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 426,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 3,
-          autoplay: true
-        }
-      }
-    ]
-  };
-
   return (
     <S.Container>
-      <Slider {...settings}>
-        {marvelData.length > 0 &&
-          marvelData.map(
-            (item) =>
-              item.description && (
-                <S.CardContainer key={String(item.id)}>
-                  <img
-                    src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-                    alt=""
-                  />
+      <MetaTags
+        title="Home | Marvel 360º"
+        description="Encontre seu quadrinho favorito na Marvel 360º"
+        image="/favicon.png"
+      />
 
-                  <Card title={item.title} />
-                </S.CardContainer>
+      <S.Header>
+        <p>
+          Clique no seu quadrinho <strong>Marvel</strong> favorito para saber
+          mais
+        </p>
+      </S.Header>
+      <S.CardContainer>
+        {marvelData?.length > 0 &&
+          marvelData?.map(
+            (item) =>
+              item?.description && (
+                <Card
+                  key={String(item?.id)}
+                  title={item?.title}
+                  src={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
+                />
               )
           )}
-      </Slider>
+      </S.CardContainer>
     </S.Container>
   );
 };
@@ -69,14 +61,7 @@ const Home: NextPage = ({ marvelData }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const publicKey = '7c9d0981ca0b182a60d9bab410e81c4f';
-  const privateKey = 'bda1a3344a65c93ffa8aa22355c283048c9dfc8b';
-  const ts = Number(new Date());
-  const hash = md5(ts + privateKey + publicKey);
-
-  const { data: marvelData } = await axios.get(
-    `http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`
-  );
+  const { data: marvelData } = await api.get('/comics');
 
   return {
     props: { marvelData: marvelData?.data?.results },

@@ -11,11 +11,14 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     --white: #ffffff;
-    --black: #000;
+    --black: #0f0f0f;
 
-    --gray-50: #f5f5f5;
+    --gray-50: #fafafa;
+    --gray-100: #f5f5f5;
     --gray-300: #b5b5b5;
     --gray-900: #202020;
+    
+    --orange-50: #f3ede9;
     --red-500: #E92529;
   }
 
@@ -33,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: transparent;
-    color: var(--gray-50);
+    color: var(--gray-100);
     overflow-x: hidden;
   }
 

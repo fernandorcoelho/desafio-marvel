@@ -1,13 +1,13 @@
-import { GlobalStyle } from '../styles/global';
 import type { AppProps } from 'next/app';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { GlobalStyle } from 'styles/global';
+import { Header } from 'components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      <Header />
       <Component {...pageProps} />
     </>
   );
