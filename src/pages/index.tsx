@@ -1,14 +1,15 @@
+import { useEffect, useState } from 'react';
 import type { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
-import md5 from 'md5';
-import axios from 'axios';
+import { RiAddFill } from 'react-icons/ri';
 
-import * as S from 'styles/pages/index';
+import { api } from 'services/client';
 import { Card } from 'components/Card';
 import MetaTags from 'components/MetaTags';
-import { api } from 'services/client';
 
-interface ComicProps {
+import * as S from 'styles/pages/index';
+
+interface ComicsProps {
   id: number;
   title: string;
   description: string;
@@ -16,16 +17,32 @@ interface ComicProps {
 }
 
 interface HomeProps {
-  marvelData: ComicProps[];
+  comics: ComicsProps[];
 }
 
-const Home: NextPage = ({ marvelData }: HomeProps) => {
-  const router = useRouter();
-  console.log(marvelData);
+const Home: NextPage = ({ comics }: HomeProps) => {
+  const [comicsArr, setComicsArr] = useState<ComicsProps[]>([]);
+  console.log(comics);
 
-  if (router.isFallback) {
-    return <p>Loading...</p>;
-  }
+  useEffect(() => {
+    comics && setComicsArr(comics);
+  }, []);
+
+  const handleMoreComics = async () => {
+    try {
+      const offset = comics.length;
+
+      const { data } = await api.get('/comics', {
+        params: {
+          offset
+        }
+      });
+
+      setComicsArr([...comicsArr, ...data.data.results]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <S.Container>
@@ -37,23 +54,28 @@ const Home: NextPage = ({ marvelData }: HomeProps) => {
 
       <S.Header>
         <p>
-          Clique no seu quadrinho <strong>Marvel</strong> favorito para saber
+          Clique no seu quadrinho favorito <strong>Marvel</strong> para saber
           mais
         </p>
       </S.Header>
       <S.CardContainer>
-        {marvelData?.length > 0 &&
-          marvelData?.map(
+        {comicsArr?.length > 0 &&
+          comicsArr?.map(
             (item) =>
               item?.description && (
                 <Card
                   key={String(item?.id)}
                   title={item?.title}
+                  description={item?.description}
                   src={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
                 />
               )
           )}
       </S.CardContainer>
+
+      <S.MoreButton onClick={() => handleMoreComics()}>
+        <span>Ver mais</span> <RiAddFill />
+      </S.MoreButton>
     </S.Container>
   );
 };
@@ -61,10 +83,10 @@ const Home: NextPage = ({ marvelData }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: marvelData } = await api.get('/comics');
+  const { data: comics } = await api.get('/comics');
 
   return {
-    props: { marvelData: marvelData?.data?.results },
+    props: { comics: comics?.data?.results },
     revalidate: 60 * 60 * 24 // 1 dia
   };
 };

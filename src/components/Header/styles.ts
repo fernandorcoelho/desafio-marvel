@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.header`
   display: flex;
   align-items: center;
-  padding: 1rem 10%;
+  padding: 1rem 3.5%;
   background-color: var(--orange-50);
 
   img {

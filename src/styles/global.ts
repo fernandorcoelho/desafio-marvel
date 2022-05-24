@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: transparent;
-    color: var(--gray-100);
+    color: var(--gray-900);
     overflow-x: hidden;
   }
 
@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
   textarea,
   select,
   button {
-    font: 400 1rem "Roboto", sans-serif;
+    font: 400 1rem "Marvel", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
