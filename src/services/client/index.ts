@@ -11,7 +11,7 @@ export function setupAPI() {
     baseURL: 'https://gateway.marvel.com/v1/public/',
     params: {
       ts,
-      apikey: process.env.PUBLIC_KEY,
+      apikey: publicKey,
       hash
     },
     // headers: {

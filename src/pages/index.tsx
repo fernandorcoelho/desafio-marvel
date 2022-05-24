@@ -14,7 +14,7 @@ interface ComicsProps {
   description: string;
   thumbnail: { path: string; extension: string };
 }
-
+//MONKEYYYYYYY desafio-marvel.vercel.app
 interface HomeProps {
   comics: ComicsProps[];
 }
@@ -95,17 +95,10 @@ const Home: NextPage = ({ comics }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  try {
-    const { data: comics } = await api.get('/comics');
-    return {
-      props: { comics: comics?.data?.results },
-      revalidate: 60 * 60 * 24 // 1 dia
-    };
-  } catch (error) {
-    console.log(error);
-    return {
-      props: { comics: {} },
-      revalidate: 60 * 60 * 24 // 1 dia
-    };
-  }
+  const { data: comics } = await api.get('/comics');
+
+  return {
+    props: { comics: comics?.data?.results },
+    revalidate: 60 * 60 * 24 // 1 dia
+  };
 };
