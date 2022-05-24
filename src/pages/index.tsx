@@ -95,10 +95,17 @@ const Home: NextPage = ({ comics }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: comics } = await api.get('/comics');
-
-  return {
-    props: { comics: comics?.data?.results },
-    revalidate: 60 * 60 * 24 // 1 dia
-  };
+  try {
+    const { data: comics } = await api.get('/comics');
+    return {
+      props: { comics: comics?.data?.results },
+      revalidate: 60 * 60 * 24 // 1 dia
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: { comics: {} },
+      revalidate: 60 * 60 * 24 // 1 dia
+    };
+  }
 };
