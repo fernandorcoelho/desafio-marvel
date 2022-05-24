@@ -18,19 +18,15 @@ export const Container = styled.main`
 
 export const CardContainer = styled.div`  
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 2rem;
+  gap: 2rem;
 
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  @media (min-width: 1400px) {
-    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -50,8 +46,35 @@ export const SearchInputContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
 
+  input {
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.625rem 0.938rem;
+    border-radius: 4px 0 0 4px;
+    box-shadow: 4px 4px 4px rgba(33,33,32,1);
+    width: 20.625rem;
+    background: rgba(33,33,32,1);
+    color: var(--white);
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      background: #263238;
+      outline: none;
+    }
+  }
+
+  button {
+    font-size: 24px;
+    background: #1c345b;
+    color: white;
+    border: blue;
+    padding: 10px 10px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 4px 4px 4px rgba(33,33,32,1);
+    text-shadow: -1px -1px 2px black;
+  }
+`;
 
 export const InfoSection = styled.div`
   display: flex;
@@ -61,7 +84,7 @@ export const InfoSection = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    
+
     img {
       height: 1.75rem;
       width: auto;

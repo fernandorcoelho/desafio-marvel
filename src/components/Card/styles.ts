@@ -16,9 +16,10 @@ export const Container = styled.div`
   z-index: 1;
 	
   &:hover {
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-    animation: float 6s ease-in-out infinite;
+    box-shadow: 1px 1px 40px var(--yellow-500);
+    transform: scale(1.02);
+    filter: brightness(1.2) saturate(110%);
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
   }
 

@@ -54,10 +54,12 @@ const Home: NextPage = ({ comics }: HomeProps) => {
       <S.Container>
         <S.Header>
           <h1>
-            Encontre seu quadrinho <img src="logo.png" id="logo" /> favorito
+            Busque pelo seu quadrinho <img src="logo.png" id="logo" /> favorito
           </h1>
+
           <S.SearchInputContainer>
             <input type="text" />
+            <button>Busca</button>
           </S.SearchInputContainer>
         </S.Header>
 

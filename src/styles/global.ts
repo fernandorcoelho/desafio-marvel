@@ -18,8 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     --gray-300: #b5b5b5;
     --gray-900: #202020;
     
-    --orange-50: #f3ede9;
     --red-500: #E92529;
+    --yellow-500: #f9b916;
+    --orange-500: #D54900;
   }
 
   @media (max-width: 1080px) {
@@ -75,5 +76,9 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     color: var(--white);
     font: 700 1.5rem "Permanent Marker", sans-serif;
+  }
+
+  ::selection {
+    color: var(--orange-500);
   }
 `;
