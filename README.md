@@ -4,50 +4,46 @@
 
 # Marvel App | front-end
 
-Front-end of Marvel application - SPA connected with a back-end developed using data and routes obtained by the official [Marvel Comics API](https://developer.marvel.com/docs). Project developed for a challenge during studies at Growdev.
-
-You can also [click here](https://github.com/cunhasbia/marvel-backend) to go to the **back-end** repository of this application. Run both projects together.
+Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel [Marvel Comics API](https://developer.marvel.com/docs). Projeto desenvolvido como um desafio pessoal.
 
 <div align="center">
     <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="/public/screenshot.png" width="100%">
 </div>
 <hr> 
 
-## :computer: Functionalities
-✔️ A homepage with the **character list** and pagination;<br>
-✔️ Input to **search** by character name;<br>
-✔️ Clicking on a character displays a **page with details** (name, description and comics info) in SPA format;<br>
-✔️ Button on the character details page to **back to homepage**;<br>
-✔️ If the character has **no image**: displays the Marvel logo;<br>
-✔️ If the character has **no description**: displays the text "description not informed".
+## :computer: Funcionalidades
+✔️ Uma homepage com a **listagem dos quadrinhos**<br>
+✔️ Input para **pesquisar** pelo nome do quadrinho;<br>
+✔️ Ao clicar no quadrinho, pode-se ver sua **descrição**;<br>
+✔️ Se o quadrinho **não possuir imagem**: é exibido a logo da marvel;<br>
+✔️ Se o quadrinho **não possuir descrição**: é mostrado o texto "descrição não informada".
 
-## :woman_technologist: Technologies and tools used
+## :man_technologist: Tecnologias e ferramentas usadas
 
-- HTML
-- CSS
-- Bootstrap
+- Next.js
+- Styled-components
 - Javascript ES6+
 - Yarn
 - Axios
 - Webpack | Babel
 
-## ▶️ How to run the project?
+## ▶️ Como rodar o projeto?
 
-Before start, install [Git](https://git-scm.com) in your machine. Moreover, recommend use the [VSCode](https://code.visualstudio.com/) terminal.
+Antes de começar, instale o [Git](https://git-scm.com) em sua máquina. Também é recomendado que se use o terminal do [VSCode](https://code.visualstudio.com/).
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/cunhasbia/marvel-frontend.git
+# Clone este repositório
+$ git clone https://github.com/fernandorcoelho/desafio-marvel.git
 
-# Access the repository on your terminal
-$ cd marvel-frontend
+# Acesse o repositório no seu terminal
+$ cd desafio-marvel
 
-# Install dependencies
+# Instale as dependências
 $ yarn install
 
-# Run
+# Inicialize o projeto
 $ yarn dev
 ```
 <hr>
 
-Made with :orange_heart: by Bianca Cunha
+Feito com :orange_heart: por Fernando Coelho
