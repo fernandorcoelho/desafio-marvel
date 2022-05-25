@@ -14,7 +14,7 @@ interface ComicsProps {
   description: string;
   thumbnail: { path: string; extension: string };
 }
-//MONKEYYYYYYY desafio-marvel.vercel.app
+
 interface HomeProps {
   comics: ComicsProps[];
 }
@@ -51,23 +51,13 @@ const Home: NextPage = ({ comics }: HomeProps) => {
       />
 
       <S.Container>
-        <S.Header>
-          <h1>
-            Busque pelo seu quadrinho <img src="logo.png" id="logo" /> favorito
-          </h1>
-
-          <S.SearchInputContainer>
-            <input type="text" />
-            <button>Busca</button>
-          </S.SearchInputContainer>
-        </S.Header>
-
         <S.InfoSection>
           <h1>
             Clique no seu quadrinho favorito <img src="logo.png" id="logo" />{' '}
             para saber mais
           </h1>
         </S.InfoSection>
+
         <S.CardContainer>
           {comicsArr?.length > 0 &&
             comicsArr?.map((item) => (

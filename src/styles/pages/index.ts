@@ -30,53 +30,6 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const Header = styled.header`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-
-  h1 {
-    font-size: 2.25rem;
-  }
-`;
-
-export const SearchInputContainer = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  input {
-    font-size: 1.5rem;
-    border: none;
-    padding: 0.625rem 0.938rem;
-    border-radius: 4px 0 0 4px;
-    box-shadow: 4px 4px 4px rgba(33,33,32,1);
-    width: 20.625rem;
-    background: rgba(33,33,32,1);
-    color: var(--white);
-    transition: all 0.2s ease-in-out;
-
-    &:focus {
-      background: #263238;
-      outline: none;
-    }
-  }
-
-  button {
-    font-size: 1.5rem;
-    background: #1c345b;
-    color: white;
-    border: blue;
-    padding: 10px 10px;
-    border-radius: 0 4px 4px 0;
-    box-shadow: 4px 4px 4px rgba(33,33,32,1);
-    text-shadow: -1px -1px 2px black;
-  }
-`;
-
 export const InfoSection = styled.div`
   display: flex;
   align-items: center;
