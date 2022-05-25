@@ -4,7 +4,7 @@
 
 # Marvel App | front-end
 
-Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel [Marvel Comics API](https://developer.marvel.com/docs). Projeto desenvolvido como um desafio pessoal.
+Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel [Marvel Comics API](https://developer.marvel.com/docs). Projeto desenvolvido como um desafio.
 
 <div align="center">
     <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="/public/screenshot.png" width="100%">
