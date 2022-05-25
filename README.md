@@ -1,19 +1,18 @@
 <div align="center">
-    <img alt="Marvel" title="Marvel Logo" src="/public/logo.png" width="20%">
+    <img alt="Marvel" title="Marvel Logo" src="public/logo.png" width="20%">
 </div>
 
 # Marvel App | front-end
 
-Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel [Marvel Comics API](https://developer.marvel.com/docs). Projeto desenvolvido como um desafio pessoal.
+Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel [Marvel Comics API](https://developer.marvel.com/docs). Projeto desenvolvido como um desafio.
 
 <div align="center">
-    <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="/public/screenshot.png" width="100%">
+    <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="public/screenshot.png" width="100%">
 </div>
 <hr> 
 
 ## :computer: Funcionalidades
 ✔️ Uma homepage com a **listagem dos quadrinhos**<br>
-✔️ Input para **pesquisar** pelo nome do quadrinho;<br>
 ✔️ Ao clicar no quadrinho, pode-se ver sua **descrição**;<br>
 ✔️ Ao clicar no botão abaixo da listagem de quadrinhos, são listados mais quadrinhos;<br>
 ✔️ Se o quadrinho **não possuir imagem**: é exibido a logo da marvel;<br>
