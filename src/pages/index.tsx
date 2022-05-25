@@ -21,7 +21,6 @@ interface HomeProps {
 
 const Home: NextPage = ({ comics }: HomeProps) => {
   const [comicsArr, setComicsArr] = useState<ComicsProps[]>([]);
-  console.log(comics);
 
   useEffect(() => {
     comics && setComicsArr(comics);

@@ -35,6 +35,7 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
 
   h1 {
     font-size: 2.25rem;
