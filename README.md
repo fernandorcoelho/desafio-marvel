@@ -13,7 +13,6 @@ Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel 
 
 ## :computer: Funcionalidades
 ✔️ Uma homepage com a **listagem dos quadrinhos**<br>
-✔️ Input para **pesquisar** pelo nome do quadrinho;<br>
 ✔️ Ao clicar no quadrinho, pode-se ver sua **descrição**;<br>
 ✔️ Ao clicar no botão abaixo da listagem de quadrinhos, são listados mais quadrinhos;<br>
 ✔️ Se o quadrinho **não possuir imagem**: é exibido a logo da marvel;<br>
