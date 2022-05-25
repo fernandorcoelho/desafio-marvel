@@ -71,11 +71,6 @@ export const GlobalStyle = createGlobalStyle`
     user-select: none;
   }
 
-  h1 {
-    color: var(--white);
-    font: 700 1.5rem "Permanent Marker", sans-serif;
-  }
-
   ::selection {
     color: var(--orange-500);
   }

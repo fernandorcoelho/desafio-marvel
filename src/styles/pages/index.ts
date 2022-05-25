@@ -37,7 +37,8 @@ export const InfoSection = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 2.25rem;
+    color: var(--white);
+    font: 700 2.25rem "Permanent Marker", sans-serif;
 
     img {
       height: 1.75rem;
