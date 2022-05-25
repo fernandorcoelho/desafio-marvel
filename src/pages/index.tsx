@@ -24,6 +24,7 @@ const Home: NextPage = ({ comics }: HomeProps) => {
 
   useEffect(() => {
     comics && setComicsArr(comics);
+    // Salva o array de comics no estado
   }, []);
 
   const handleMoreComics = async () => {
@@ -41,6 +42,7 @@ const Home: NextPage = ({ comics }: HomeProps) => {
       console.log(error);
     }
   };
+  // Adiciona mais comics ao array de comics
 
   return (
     <>
@@ -49,6 +51,7 @@ const Home: NextPage = ({ comics }: HomeProps) => {
         description="Encontre seu quadrinho favorito na Marvel 360º"
         image="/favicon.png"
       />
+      {/* SEO - MetaTags para a página */}
 
       <S.Container>
         <S.InfoSection>
@@ -57,6 +60,7 @@ const Home: NextPage = ({ comics }: HomeProps) => {
             para saber mais
           </h1>
         </S.InfoSection>
+        {/* Sessão informativa */}
 
         <S.CardContainer>
           {comicsArr?.length > 0 &&
@@ -74,10 +78,12 @@ const Home: NextPage = ({ comics }: HomeProps) => {
               />
             ))}
         </S.CardContainer>
+        {/* Renderização dos cards */}
 
         <S.MoreButton onClick={() => handleMoreComics()}>
           <span>Ver mais</span> <RiAddFill />
         </S.MoreButton>
+        {/* Botão para carregar mais dados dos quadrinhos */}
       </S.Container>
     </>
   );
@@ -85,6 +91,7 @@ const Home: NextPage = ({ comics }: HomeProps) => {
 
 export default Home;
 
+// Static-Site Generation - Next.js para chamada da API
 export const getStaticProps: GetStaticProps = async () => {
   const { data: comics } = await api.get('/comics');
 

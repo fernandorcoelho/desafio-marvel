@@ -6,17 +6,17 @@ export const Container = styled.main`
   gap: 4rem;
   padding: 3rem 10%;
 
-  background: #DC2424; 
-  background: -webkit-linear-gradient(to left,  #bc4040, #5c6dd6); 
-  background: linear-gradient(to left,  #bc4040, #5c6dd6); 
+  background: #DC2424;
+  background: -webkit-linear-gradient(to left,  #bc4040, #5c6dd6);
+  background: linear-gradient(to left,  #bc4040, #5c6dd6);
 
   #logo {
     width: auto;
     height: 3rem;
-  }  
+  }
 `;
 
-export const CardContainer = styled.div`  
+export const CardContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +30,7 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const InfoSection = styled.div`
+export const InfoSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +62,7 @@ export const MoreButton = styled.div`
   height: 3.5rem;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  
+
   > span {
     font-size: 1.5rem;
     font-weight: 700;
