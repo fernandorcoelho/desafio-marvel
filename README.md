@@ -7,7 +7,7 @@
 Front-end de uma aplicação Marvel - SPA conectada com a API oficial da marvel [Marvel Comics API](https://developer.marvel.com/docs). Projeto desenvolvido como um desafio.
 
 <div align="center">
-    <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="/public/screenshot.png" width="100%">
+    <img alt="Screenshot Marvel App" title="Screenshot Marvel App" src="public/screenshot.png" width="100%">
 </div>
 <hr> 
 
